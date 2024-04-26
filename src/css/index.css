@@ -1,0 +1,234 @@
+:root {
+  --mainColor: #17202a;
+  --mainTextColor: #f7f9f9;
+  --mainSectionTextColor: #566573;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #fbfcfc;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Start aside styles  */
+aside {
+  display: inline-block;
+  background-color: var(--mainColor);
+  width: 30%;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  color: var(--mainTextColor);
+  border-top-right-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+aside #add-project-button {
+  border: 0.5px solid #909497;
+  padding: 7px 10px;
+  background-color: #273746;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: 0.4s ease;
+  margin-top: 20px;
+  color: var(--mainTextColor);
+}
+
+aside #add-project-button:hover,
+aside .projects button:hover {
+  background-color: #566573;
+}
+
+aside .projects {
+  margin-top: 20px;
+}
+
+aside .projects button {
+  width: 80%;
+  border: none;
+  display: block;
+  background-color: transparent;
+  margin-top: 5px;
+  transition: 0.4s ease;
+  color: var(--mainTextColor);
+  text-align: left;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+aside .projects button:hover {
+  border-bottom: 1px solid var(--mainTextColor);
+}
+
+.selected-project {
+  border-bottom: 1px solid var(--mainTextColor) !important;
+  background-color: #566573 !important;
+}
+
+/* End aside styles  */
+
+/* Start Project styles */
+.project {
+  position: absolute;
+  left: 30%;
+  top: 50px;
+  background-color: transparent;
+  color: var(--mainSectionTextColor);
+  padding: 10px;
+  width: 70%;
+}
+
+/* End Project styles */
+
+/* Start Project info styles */
+#project-info .title-delete-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#project-info .title-delete-section button {
+  border: none;
+  background-color: transparent;
+}
+
+#project-info .title-delete-section button:hover {
+  color: #c0392b;
+}
+/* End Project info styles */
+
+input {
+  background-color: #b2babb;
+}
+
+/* Start Add Task styles */
+#add-task {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#add-task input {
+  margin-right: 20px;
+  height: 30px;
+  width: 40%;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#add-task button {
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+#add-task button:hover {
+  color: #52be80;
+}
+
+#available-tasks {
+  background-color: #b2babb;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#available-tasks .task {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+#available-tasks .task button {
+  background-color: transparent;
+  border: none;
+}
+
+#available-tasks .task button:hover {
+  color: #c0392b;
+}
+/* End Add Task styles */
+
+/* Start Add New Project Styles */
+#add-new-project {
+  position: absolute;
+  top: 50px;
+  left: 30%;
+  padding: 20px;
+  width: 70%;
+}
+
+#add-new-project .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#add-new-project .buttons button {
+  margin-left: 15px;
+  padding: 7px 15px;
+  border: none;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+#add-new-project .buttons .save-button {
+  background-color: #b2babb;
+  border-radius: 5px;
+}
+
+#add-new-project .buttons .save-button:hover {
+  background-color: #d0d3d4;
+}
+
+#add-new-project .user-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#add-new-project .user-input input {
+  border: none;
+  border-bottom: 3px solid #566573;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#add-new-project .user-input input.selected {
+  border-bottom: 3px solid #17202a;
+  outline: none;
+}
+
+/* End Add New Project Styles */
+
+/* Start No Project Selected Styles */
+#no-project-selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  left: 30%;
+  width: 70%;
+}
+
+#no-project-selected > img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+#no-project-selected > button {
+  border: none;
+  background-color: #17202a;
+  color: var(--mainTextColor);
+  padding: 10px;
+  border-radius: 5px;
+}
+/* End No Project Selected Styles */
