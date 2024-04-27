@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { validateUserInputs } from "../../util/inputValidation";
-import Modal from "./Modal.jsx";
+import Modal from "../Modal.jsx";
 
 export default function NewProject({
   setIsAddNewProjectClicked,
@@ -55,8 +55,8 @@ export default function NewProject({
       setIsInvalidUserInput(false);
       errors.current = [];
     } else {
-      // modal.current.open();
       setIsInvalidUserInput(true);
+      modal.current.open();
     }
   }
 
@@ -71,17 +71,14 @@ export default function NewProject({
         </button>
       </div>
 
-      {/* {isInvalidUserInput && (
-        <Modal ref={modal}>
-          <h2>Invalid Project Information</h2>
-          <ul style={{ color: "red" }}>
-            {errors.current.map((error, index) => {
-              return <li key={index}>{error}</li>;
-            })}
-          </ul>
-        </Modal>
-      )} */}
-
+      <Modal ref={modal}>
+        <h2>Invalid Project Information</h2>
+        <ul style={{ color: "red" }}>
+          {errors.current?.map((error, index) => {
+            return <li key={index}>{error}</li>;
+          })}
+        </ul>
+      </Modal>
       <form>
         <div className="user-input title">
           <label>Title</label>
